@@ -11,7 +11,17 @@ const getWeather = (lat, long, callback) => {
         } else {
             callback(
                 undefined,
-                `It is currently ${body.current.temperature} degrees out. It feels like ${body.current.feelslike} degrees out.`
+                `Description: ${body.current.weather_descriptions[0]} <br>
+                 Current temperature: ${body.current.temperature}° c <br>
+                 Feels like: ${body.current.feelslike}° c <br>
+                 Humidity: ${body.current.humidity}% <br>
+                 Precipitation: ${body.current.precip}% <br>
+                 Wind: ${body.current.wind_dir} ${body.current.wind_speed} Km/h <br>
+                 Visibility: ${body.current.visibility} km <br>
+                 Pressure: ${body.current.pressure} mb<br>
+                 UV index: ${body.current.uv_index} <br> <br>
+                 
+                 This data was recorded at ${body.current.observation_time} gmt <br>`
             );
         }
     });
