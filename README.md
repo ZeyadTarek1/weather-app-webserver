@@ -1,5 +1,6 @@
 # weather-app-webserver
 
+deployed at https://ziad-weather-app.herokuapp.com/
 weather-app running on expressjs
 
 # usage
