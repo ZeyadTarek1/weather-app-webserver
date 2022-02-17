@@ -47,6 +47,7 @@ app.get("/help", (req, res) => {
     });
 });
 
+// constructing query string with the name address
 app.get("/weather", (req, res) => {
     // res.send sends data to browser as http response
     if (!req.query.address) {
