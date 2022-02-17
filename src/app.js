@@ -7,6 +7,7 @@ const getWeather = require("./utils/getWeather");
 path.join(__dirname, "../public"); //join the directory name (HDD/web-server/src to HDD/web-server/public)
 
 const app = express();
+const port = process.env.PORT || 3000; //change port depending on local or remote
 
 // Path definitions
 const publicDir = path.join(__dirname, "../public"); //set the public location
@@ -101,7 +102,7 @@ app.get("*", (req, res) => {
     });
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
     //start the express engine on port 3000
-    console.log("Server running on port 3000!");
+    console.log(`Server running on port ${port}!`);
 });

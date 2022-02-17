@@ -6,7 +6,7 @@ const inputData = document.querySelector("input");
 const msgOne = document.querySelector("#message-1");
 const msgTwo = document.querySelector("#message-2");
 
-const url = "http://localhost:3000/weather?address="; //base url string
+const url = "/weather?address="; //base url string
 
 weatherForm.addEventListener("submit", (e) => {
     e.preventDefault();
